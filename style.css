@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Rubik:wght@400;600&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.space-between{
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+#navBar{
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav img{
+    height: 2rem;
+}
+#cartItems{
+    font-weight: bold;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    background-image: url('assets/kw-background.png');
+    background-size: 100% 100%;
+    color: white;
+    background-size: cover;
+    background-position: right;
+}
+
+header div{
+    max-height: 100%;
+    max-width: 20%;
+    padding: 5% 5%;
+}
+
+header h1 {
+    font-size: 7vh;
+}
+
+header h5 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+section h1{
+  margin: 1rem;
+}
+h4 {
+  color: grey;
+  font-weight: lighter;
+}
+
+h3,h4{
+  margin: 0.7rem 0px;
+}
+
+.discover{
+    margin: 4%;
+}
+
+.newbooks{
+    margin: 5%;
+}
+
+.books {
+    max-width: 200px;
+}
+
+.add{
+    justify-content: space-between;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: #6095ff;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.button img{
+    height: 1rem;
+}
+
+.outerBookContainer{
+    width: 225px;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+
+.bookContainer{
+    width: 200px;
+}
+
+p{
+    font-weight: 900;
+}
+
+.outerContainer{
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+
+.Container{
+    width: 300px;
+}
+
+.games{
+    max-width: 300px;
+}
+
+footer{
+    color: white;
+    background-image: url("http://i1.faceprep.in/prograd-junior/footer-bg.png");
+    background-size: 100% 100%;
+    padding: 0% 5%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+  
+footer #pacman{
+    height:150px;
+    border-radius: 50%;
+}
+
+#details {
+    flex-direction: column;
+    text-align: right;
+    vertical-align: middle;
+}
+
+@media (max-width: 1200px){
+    header {
+        font-size: 15px;
+        text-align: start;
+        background-size: 100% 100%;
+        background-size: cover;
+        background-position: right;
+      }
+    
+      header h1 {
+        font-size: 5vh;
+      }
+    
+      header h5 {
+        font-size: 1rem;
+      }
+}
+  @media(max-width: 600px) {
+    header {
+        font-size: 15px;
+        text-align: start;
+        background-size: 100% 100%;
+        background-size: cover;
+        background-position: right;
+      }
+    
+      header h1 {
+        font-size: 3vh;
+      }
+    
+      header h5 {
+        font-size: 13px;
+      }
+    #details{
+        text-align: center;
+    }
+    body {
+      text-align: center;
+    }
+
+  }
