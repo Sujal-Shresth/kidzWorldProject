@@ -167,15 +167,6 @@ for (let i = 0; i < addItemButtons.length; i++) {
   });
 }
 
-placeOrder.addEventListener('click', () => {
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].quantity != 0) {
-      console.log("Item name: " + items[i].name + "\nQuantity: " + items[i].quantity);
-    }
-  }
-  console.log("The total amount is " + total$ + "$ and " + totalCents + " cents");
-});
-
 cart.addEventListener('click', () => {
   updatePrice();
   document.getElementById("cartDiv").style.display = "block";
@@ -185,5 +176,28 @@ crossButton.addEventListener('click', () => {
   document.getElementById("cartDiv").style.display = "none";
 });
 
+let link='https://api.whatsapp.com/send?phone=9317524556&text=Order%20Details%20:';
 
+// %0A
+// %20
 
+function updateWhatsAppLink(){
+  for(let index = 0; index < items.length; index++){
+    if(items[index].quantity != 0){
+      link += "%0A" + items[index].name + "%20: " + items[index].quantity;
+    }
+  }
+  link += "%0A" + "Total%20price:%20$" + total$ + ".%20" + totalCents;
+}
+
+placeOrder.addEventListener('click', () => {
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].quantity != 0) {
+      console.log("Item name: " + items[i].name + "\nQuantity: " + items[i].quantity);
+    }
+  }
+  console.log("The total amount is " + total$ + "$ and " + totalCents + " cents");
+  updateWhatsAppLink();
+  console.log(link);
+  window.open(link,"_blank");
+});//
