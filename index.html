@@ -15,7 +15,7 @@
     </div>
     <div class="flex-row" id="cartItems">
       <img src="assets/cart-icon.png" alt="">
-      <p>Cart items (<span>0</span>)</p>
+      <p>Cart items (<span id="cartValue">0</span>)</p>
     </div>
   </nav>
   <header>
@@ -96,7 +96,7 @@
             <div>
               <img src="./assets/book4.png" alt="" class="books" />
               <h3>Harry Potter</h3>
-              <h4>JK Rowling</h4>
+              <h4>Roald Dahl</h4>
             </div>
             <div class="flex-row add">
               <p>$10</p>
@@ -333,6 +333,20 @@
       <p>Talk to me at sujshrest@gmail.com</p>
     </div>
   </footer>
+
+  <div id="cartDiv">
+    <span id="crossButton">&#10060</span>
+
+    <div id="cart">
+    </div>
+
+    <div id="orderDiv">
+      <div id="costSec"><span id="totalPriceLable"> Total Cost: <strong>$ <span id="totalPrice"></span> </strong></span>
+      </div>
+      <div id="placeOrder">Place Order</div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

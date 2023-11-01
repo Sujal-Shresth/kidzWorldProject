@@ -31,8 +31,12 @@ nav img{
 #cartItems{
     font-weight: bold;
     align-items: center;
+    cursor: pointer;
 }
 
+#cartItems:hover{
+  color: #6095ff;
+}
 header{
     width: 100%;
     background-image: url('assets/kw-background.png');
@@ -66,7 +70,7 @@ h2 {
 section h1{
   margin: 1rem;
 }
-h4 {
+h4{
   color: grey;
   font-weight: lighter;
 }
@@ -126,6 +130,8 @@ p{
     display: flex;
     justify-content: center;
     margin: 1rem 0rem;
+    background-color: white;
+    border-radius: 20px;
 }
 
 .Container{
@@ -157,6 +163,88 @@ footer #pacman{
     vertical-align: middle;
 }
 
+#cartDiv{
+  display: none;
+  position: fixed;
+  height: 90vh;
+  top: 5vh;
+  width: 90vw;
+  left: 5vw;
+  background-color: rgba(237, 227, 223, 0.769);
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px 2px rgba(255, 127, 80, 0.432);
+}
+
+#cart{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin: 2.5rem;
+  margin-top: 4rem;
+}
+
+#cart::-webkit-scrollbar {
+  display: none;
+}
+
+#cart .outerContainer{
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+#crossButton{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right:2rem;
+  top: 1.5rem;
+  background-color: #6095ff;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#crossButton:hover,#placeOrder:hover{
+  background-color: #2d6ef0c8;
+}
+
+#orderDiv{
+  display: flex;
+  margin-left: 25%;
+  margin-right: 25%;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+#costSec, #placeOrder{
+  height: 4rem;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+#placeOrder{
+  background-color: #6095ff;
+  color: white;
+  cursor: pointer;
+}
+
+.cartOuterContainer{
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.cartContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+.cartImg{
+  height: 275px;
+}
 @media (max-width: 1200px){
     header {
         font-size: 15px;
@@ -174,7 +262,15 @@ footer #pacman{
         font-size: 1rem;
       }
 }
-  @media(max-width: 600px) {
+
+@media (max-width: 1100px){
+  #orderDiv{
+    font-size: 1.5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+  @media(max-width: 700px) {
     header {
         font-size: 15px;
         text-align: start;
@@ -196,5 +292,25 @@ footer #pacman{
     body {
       text-align: center;
     }
+    #orderDiv{
+      font-size: 1.5rem;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
 
+  @media(max-width: 500px){
+    #orderDiv{
+      font-size: 1.25rem;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+  }
+  @media(max-width: 360px){
+    #orderDiv{
+      font-size: 1rem;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+    }
   }
