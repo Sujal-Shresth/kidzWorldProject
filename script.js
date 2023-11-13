@@ -169,6 +169,12 @@ for (let i = 0; i < addItemButtons.length; i++) {
 
 cart.addEventListener('click', () => {
   updatePrice();
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].quantity != 0) {
+      console.log("Item name: " + items[i].name + "\nQuantity: " + items[i].quantity);
+    }
+  }
+  console.log("The total amount is " + total$ + "$ and " + totalCents + " cents");
   document.getElementById("cartDiv").style.display = "block";
 });
 
@@ -191,12 +197,12 @@ function updateWhatsAppLink(){
 }
 
 placeOrder.addEventListener('click', () => {
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].quantity != 0) {
-      console.log("Item name: " + items[i].name + "\nQuantity: " + items[i].quantity);
-    }
-  }
-  console.log("The total amount is " + total$ + "$ and " + totalCents + " cents");
+  // for (let i = 0; i < items.length; i++) {
+  //   if (items[i].quantity != 0) {
+  //     console.log("Item name: " + items[i].name + "\nQuantity: " + items[i].quantity);
+  //   }
+  // }
+  // console.log("The total amount is " + total$ + "$ and " + totalCents + " cents");
   updateWhatsAppLink();
   console.log(link);
   window.open(link,"_blank");
